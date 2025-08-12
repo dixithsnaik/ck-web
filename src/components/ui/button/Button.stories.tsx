@@ -1,69 +1,82 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button, buttonVariants } from "./button";
-import type { VariantProps } from "class-variance-authority";
-
-// Extract the variant and size types directly from buttonVariants
-type ButtonVariant = NonNullable<VariantProps<typeof buttonVariants>["variant"]>;
-type ButtonSize = NonNullable<VariantProps<typeof buttonVariants>["size"]>;
+import { Button } from "@/components/ui/button";
 
 const meta: Meta<typeof Button> = {
-  title: "UI/Button",
+  title: "Components/Button",
   component: Button,
-  tags: ["autodocs"],
+  args: {
+    children: "Primary Button",
+    variant: "primary",
+    asChild: false,
+    className: "",
+  },
   argTypes: {
     variant: {
-      control: "select",
-      options: ["default", "destructive", "outline", "secondary", "ghost", "link"] as ButtonVariant[],
+      control: { type: "select" },
+      options: [
+        "primary",
+        "secondary",
+        "primaryOutlined",
+        "secondaryOutlined",
+        "cancel",
+      ],
     },
-    size: {
-      control: "select",
-      options: ["default", "sm", "lg", "icon"] as ButtonSize[],
+    asChild: {
+      control: { type: "boolean" },
     },
-    asChild: { control: "boolean" },
+    className: {
+      control: { type: "text" },
+    },
+    children: {
+      control: { type: "text" },
+    },
   },
 };
 
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const Default: Story = {
+export const Playground: Story = {
+  render: (args) => <Button {...args} />,
   args: {
-    children: "Click me",
-    variant: "default",
-    size: "default",
+    children: "Primary Button",
   },
 };
 
-export const Variants: Story = {
+export const AllVariants: Story = {
   render: () => (
-    <div className="flex flex-wrap gap-3">
-      {(["default", "destructive", "outline", "secondary", "ghost", "link"] as ButtonVariant[]).map(
-        (variant) => (
-          <Button key={variant} variant={variant}>
-            {variant}
-          </Button>
-        )
-      )}
+    <div className="flex flex-wrap gap-4">
+      <Button variant="primary" className="mx-2">Primary Button</Button>
+      <Button variant="secondary" className="mx-2">Secondary Button</Button>
+      <Button variant="primaryOutlined" className="mx-2">Primary Outlined</Button>
+      <Button variant="secondaryOutlined" className="mx-2">Secondary Outlined</Button>
+      <Button variant="cancel" className="mx-2">Cancel</Button>
     </div>
   ),
 };
 
-export const Sizes: Story = {
+export const WithCustomContent: Story = {
   render: () => (
-    <div className="flex items-center gap-3">
-      {(["sm", "default", "lg", "icon"] as ButtonSize[]).map((size) => (
-        <Button key={size} size={size}>
-          {size === "icon" ? "🔍" : size}
-        </Button>
-      ))}
+    <div className="flex gap-4">
+      <Button variant="primary" className="mx-2">
+        <span className="mr-2">Next</span>
+        {/* Example custom content - you can swap for your own icons/components */}
+        <svg width="16" height="16" fill="none"><path d="M1 8h14M9 3l6 5-6 5" stroke="#222" strokeWidth="2"/></svg>
+      </Button>
+      <Button variant="cancel" className="mx-2">
+        <span>Cancel</span>
+        {/* Add another icon or spinner here if you want */}
+      </Button>
     </div>
   ),
 };
 
-export const AsLink: Story = {
+export const AsAnchor: Story = {
   render: () => (
-    <a className={buttonVariants({ variant: "link" })} href="#">
-      Styled Link
-    </a>
+    <Button asChild variant="primary" className="mx-2">
+      <a href="https://storybook.js.org" target="_blank" rel="noopener noreferrer">
+        Button as a Link
+      </a>
+    </Button>
   ),
 };
