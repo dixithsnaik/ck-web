@@ -11,7 +11,7 @@ export default function HeroSection({
   description: string;
 }) {
   return (
-    <section className="min-h-screen bg-white flex flex-col">
+    <section className="bg-white flex flex-col">
       <div className="grid lg:grid-cols-2 w-full">
         {/* Left Content */}
         <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-20 flex flex-col justify-start pt-12">
@@ -42,7 +42,7 @@ export default function HeroSection({
         </div>
 
         {/* Right Image */}
-        <div className="flex justify-end items-start">
+        <div className="flex justify-end items-end">
           <img
             src={CK_ASSETS.HERO_IMAGE.URL}
             alt={CK_ASSETS.HERO_IMAGE.ALT}
