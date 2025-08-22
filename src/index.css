@@ -12,6 +12,7 @@
     --color-white-300: #EBEBEB;
     --color-white-400: #E5E5E5;
 
+
     /* Gray shades */
     --color-gray-50:  #F5F5F5;
     --color-gray-100: #E0E0E0;
@@ -35,4 +36,7 @@
 
     /* Dark */
     --color-dark: #1E1E23;
+
+    --color-ck-bg-primary: "FFFFFF";
+    --color-ck-bg-secondary: "F8F7FE";
   }
