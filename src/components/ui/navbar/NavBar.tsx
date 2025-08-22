@@ -121,10 +121,10 @@ export default function Navbar() {
       <div className="flex items-center space-x-4">
         {!token ? (
           <>
-            <Button variant="primaryOutlined" className="rounded-full" onClick={() => navigate("/signup")}>
+            <Button variant="primaryOutlined" className="rounded-full px-6 py-1" onClick={() => navigate("/signup")}>
               Sign up
             </Button>
-            <Button variant="secondaryOutlined" className="rounded-full" onClick={() => navigate("/login")}>
+            <Button variant="secondaryOutlined" className="rounded-full px-6 py-1" onClick={() => navigate("/login")}>
               Login
             </Button>
           </>

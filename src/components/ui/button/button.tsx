@@ -5,7 +5,7 @@ import { cn } from "@/components/utils";
 
 // No explicit w- / h-, now it hugs its content; you use mx/my as needed outside
 export const buttonVariants = cva(
-  "inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none rounded-sm font-sans px-6 py-2 shadow-md shadow-black/15",
+  "inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none rounded-sm font-sans shadow-md shadow-black/15",
   {
     variants: {
       variant: {

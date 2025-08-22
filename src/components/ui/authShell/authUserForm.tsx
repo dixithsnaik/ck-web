@@ -91,7 +91,7 @@ export const AuthUserForm: React.FC<AuthUserFormProps> = ({ mode, redirectTo = "
           )}
         </div>
 
-        <Button onClick={handleSubmit} className="font-normal w-full">
+        <Button onClick={handleSubmit} className="w-full py-2" variant="primaryOutlined">
           {mode === "login" ? "Login" : "Sign Up"}
         </Button>
 

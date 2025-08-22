@@ -32,7 +32,7 @@ export default function HeroSection({
             <div className="flex space-x-4 mt-8">
               <Button
                 variant="primaryOutlined"
-                className="rounded-full"
+                className="rounded-full px-6 py-1"
                 onClick={() => {}}
               >
                 Get Started
