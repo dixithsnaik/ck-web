@@ -46,3 +46,27 @@ export const HOMEPAGE_HERO_SECTION = {
     SUB_HEADING: "Rent your PC. Join the Cloud. Earn like never before.",
     DESCRIPTION: "Put your unused PC to work and earn real money by joining a global cloud network. It’s secure, seamless, and designed for anyone—no advanced setup needed. Start earning passive income just by staying connected."
 };
+
+export const FAQS = [
+  {
+    question: "What is this platform and who is it for?",
+    answer:
+      "This platform connects organizations that have spare server capacity with those who need on-demand compute power. Whether you're a company or an individual looking to monetize your unused hardware or a business/individual needing compute infrastructure, our platform supports both roles seamlessly.",
+  },
+  {
+    question: "What is this platform and who is it for?",
+    answer: "Answer for second question goes here...",
+  },
+  {
+    question: "What is this platform and who is it for?",
+    answer: "Answer for third question goes here...",
+  },
+  {
+    question: "What is this platform and who is it for?",
+    answer: "Answer for fourth question goes here...",
+  },
+  {
+    question: "What is this platform and who is it for?",
+    answer: "Answer for fifth question goes here...",
+  },
+];
