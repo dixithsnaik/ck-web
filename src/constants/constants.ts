@@ -10,7 +10,7 @@ export const BUTTON_LABELS = {
    LOGIN: "Login",
    SIGN_UP: "Sign Up",
    CONTINUE: "Continue",
-
+   GET_STARTED: "Get Started"
 };
 export const INPUT_CONSTANTS = {
     EMAIL: {

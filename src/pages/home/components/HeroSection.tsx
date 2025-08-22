@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CK_ASSETS } from "@/constants/assets";
+import { BUTTON_LABELS } from "@/constants/constants";
 
 export default function HeroSection({
   heading,
@@ -35,7 +36,7 @@ export default function HeroSection({
                 className="rounded-full px-6 py-1"
                 onClick={() => {}}
               >
-                Get Started
+               {BUTTON_LABELS.GET_STARTED}
               </Button>
             </div>
           </div>
