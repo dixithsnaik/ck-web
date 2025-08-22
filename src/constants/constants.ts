@@ -40,3 +40,9 @@ export const FORGOT_PASSWORD = "Forgot Password?";
 export const REMEMBER_ME = "Remember Me";
 export const DONT_HAVE_AN_ACCOUNT =  "Don’t have an account?";
 export const ALREADY_HAVE_AN_ACCOUNT= "Already have an account?";
+
+export const HOMEPAGE_HERO_SECTION = { 
+    HEADING: "Power Up Your Earnings!",
+    SUB_HEADING: "Rent your PC. Join the Cloud. Earn like never before.",
+    DESCRIPTION: "Put your unused PC to work and earn real money by joining a global cloud network. It’s secure, seamless, and designed for anyone—no advanced setup needed. Start earning passive income just by staying connected."
+};

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
 import PageSeatter, { Section } from "@/components/ui/pageSeatter/PageSeatter";
 import PageLayout from "@/components/ui/layout/pageLayout";
+import { HOMEPAGE_HERO_SECTION } from "@/constants/constants";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -11,9 +12,9 @@ export default function HomePage() {
       <PageSeatter>
         <Section>
           <HeroSection
-            heading="Power Up Your Earnings!"
-            subHeading="Rent your PC. Join the Cloud. Earn like never before."
-            description="Put your unused PC to work and earn real money by joining a global cloud network. It’s secure, seamless, and designed for anyone—no advanced setup needed. Start earning passive income just by staying connected."
+            heading={HOMEPAGE_HERO_SECTION.HEADING}
+            subHeading={HOMEPAGE_HERO_SECTION.SUB_HEADING}
+            description={HOMEPAGE_HERO_SECTION.DESCRIPTION}
           />
         </Section>
         <Section>
@@ -22,7 +23,6 @@ export default function HomePage() {
           <Button variant="primary" type="submit">
             <span>Primary Button</span>
           </Button>
-
           <Button variant="cancel" className="underline">
             <span>Cancel</span>
           </Button>
