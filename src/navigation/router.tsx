@@ -5,6 +5,7 @@ import HomePage from "@/pages/home/HomePage";
 import LoginPage from "@/pages/login/LoginPage";
 import SignupPage from "@/pages/signup/SignupPage";
 import ProfilePage from "@/pages/profile/ProfilePage";
+import SomethingWentWrong from "@/pages/SomethingWentWrong/SomethingWentWrong";
 
 type RouteProps = {
   children: ReactNode;
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+  },
+  {
+    path: "/404",
+    element: <SomethingWentWrong />,
   },
   {
     path: "/login",
