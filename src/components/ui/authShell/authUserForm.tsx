@@ -2,13 +2,18 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Input from "@/components/ui/input/input";
+import { loginUser, registerUser } from "@/apiServices/managementApis/Apis";
+import { CustomAlert } from "../Alert/CustomAlert";
 
 interface AuthUserFormProps {
   mode: "login" | "signup";
-  redirectTo?: string; // defaults to "/"
+  redirectTo?: string;
 }
 
-export const AuthUserForm: React.FC<AuthUserFormProps> = ({ mode, redirectTo = "/" }) => {
+export const AuthUserForm: React.FC<AuthUserFormProps> = ({
+  mode,
+  redirectTo = "/",
+}) => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -19,20 +24,53 @@ export const AuthUserForm: React.FC<AuthUserFormProps> = ({ mode, redirectTo = "
     rememberMe: false,
   });
 
-  const handleChange = (field: keyof typeof formData, value: string | boolean) => {
+  const [error, setError] = useState<string | null>(null);
+
+  const handleChange = (
+    field: keyof typeof formData,
+    value: string | boolean
+  ) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = () => {
-    if (mode === "login") {
-      console.log("Logging in with", formData);
-      // TODO: login API call
-    } else {
-      console.log("Signing up with", formData);
-      // TODO: signup API call
-    }
+  const handleSubmit = async () => {
+    try {
+      if (mode === "login") {
+        const payload = {
+          username_or_email: formData.email || formData.name,
+          password: formData.password,
+        };
 
-    navigate(redirectTo);
+        const res = await loginUser(payload);
+        if (!res) {
+          setError("Invalid credentials. Please try again.");
+          return;
+        }
+      } else {
+        if (formData.password !== formData.confirmPassword) {
+          setError("Passwords do not match");
+          return;
+        }
+
+        const payload = {
+          email: formData.email,
+          username: formData.name,
+          password: formData.password,
+        };
+
+        const res = await registerUser(payload);
+        if (!res) {
+          setError("Registration failed. Please try again.");
+          return;
+        }
+      }
+
+      // Success → navigate
+      navigate(redirectTo);
+    } catch (err) {
+      setError("Something went wrong. Please try again.");
+      console.error("Auth error:", err);
+    }
   };
 
   return (
@@ -80,7 +118,7 @@ export const AuthUserForm: React.FC<AuthUserFormProps> = ({ mode, redirectTo = "
               type="checkbox"
               checked={formData.rememberMe}
               onChange={(e) => handleChange("rememberMe", e.target.checked)}
-            />{" "}
+            />
             Remember Me
           </label>
 
@@ -90,8 +128,11 @@ export const AuthUserForm: React.FC<AuthUserFormProps> = ({ mode, redirectTo = "
             </Button>
           )}
         </div>
-
-        <Button onClick={handleSubmit} className="w-full py-2" variant="primaryOutlined">
+        <Button
+          onClick={handleSubmit}
+          className="w-full py-2"
+          variant="primaryOutlined"
+        >
           {mode === "login" ? "Login" : "Sign Up"}
         </Button>
 
@@ -109,6 +150,13 @@ export const AuthUserForm: React.FC<AuthUserFormProps> = ({ mode, redirectTo = "
           </Button>
         </div>
       </div>
+      {error && (
+        <CustomAlert
+          type="error"
+          message={error || ""}
+          onClose={() => setError(null)}
+        />
+      )}
     </div>
   );
 };

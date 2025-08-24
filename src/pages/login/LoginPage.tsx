@@ -9,7 +9,6 @@ import { HERO_IMAGE } from "@/constants/assets";
 import { AUTH_SHOWCASE_TEXT, LOGIN_HEADERS } from "@/constants/constants";
 
 const LoginPage = () => {
-
   return (
     <AuthShell>
       {/* Left Side: Login Form */}
