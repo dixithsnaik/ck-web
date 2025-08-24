@@ -23,7 +23,7 @@ export default function HomePage() {
         <Section className="items-center flex flex-col py-14">
           <Button
             variant={"primaryOutlined"}
-            className="px-4 py-0.5 rounded-full"
+            className="px-4 py-0.5 rounded-full shadow-none"
           >
             Our Benefit for You
           </Button>
@@ -59,7 +59,7 @@ export default function HomePage() {
               <div className="lg:col-span-4 flex flex-col items-start">
                 <Button
                   variant="primaryOutlined"
-                  className="px-4 py-0.5 rounded-full mb-4"
+                  className="px-4 py-0.5 rounded-full mb-4 shadow-none"
                 >
                   Our Key Features
                 </Button>
@@ -118,7 +118,7 @@ export default function HomePage() {
         <Section className="items-center flex flex-col py-14">
           <Button
             variant={"primaryOutlined"}
-            className="px-4 py-0.5 rounded-full"
+            className="px-4 py-0.5 rounded-full shadow-none"
           >
             Why We Do This
           </Button>
@@ -149,7 +149,7 @@ export default function HomePage() {
         <Section className="items-center flex flex-col py-14">
           <Button
             variant={"primaryOutlined"}
-            className="px-4 py-0.5 rounded-full"
+            className="px-4 py-0.5 rounded-full shadow-none"
           >
            Frequently Asked Question
           </Button>

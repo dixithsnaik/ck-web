@@ -16,7 +16,7 @@ type PageSeatterProps = {
 
 export function PageSeatter({
   children,
-  colors = ["bg-white", "bg-[#F8F7FE]"], // default colors
+  colors = ["bg-ckBgPrimary", "bg-ckBgSecondary"],
   ...props
 }: PageSeatterProps) {
   const items = React.Children.toArray(children);

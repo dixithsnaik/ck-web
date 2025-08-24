@@ -37,6 +37,6 @@
     /* Dark */
     --color-dark: #1E1E23;
 
-    --color-ck-bg-primary: "FFFFFF";
-    --color-ck-bg-secondary: "F8F7FE";
+    --color-ckBgPrimary: #FFFFFF;
+    --color-ckBgSecondary: #F8F7FE;
   }

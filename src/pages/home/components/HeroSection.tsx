@@ -33,7 +33,7 @@ export default function HeroSection({
             <div className="flex space-x-4 mt-8">
               <Button
                 variant="primaryOutlined"
-                className="rounded-full px-6 py-1"
+                className="rounded-full px-6 py-1 hover:shadow-lg hover:px-7 hover:py-1.5 transition-all hover:pivote-center"
                 onClick={() => {}}
               >
                {BUTTON_LABELS.GET_STARTED}
