@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { CK_ASSETS } from "@/constants/assets";
+import { HERO_IMAGE } from "@/constants/assets";
 import { BUTTON_LABELS } from "@/constants/constants";
 
 export default function HeroSection({
@@ -21,7 +21,7 @@ export default function HeroSection({
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold text-slate-900 leading-tight whitespace-nowrap">
                 {heading}
               </h1>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-light text-slate-700 leading-snug max-w-3xl">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-light text-slate-700 leading-snug">
                 {subHeading}
               </h2>
 
@@ -45,8 +45,8 @@ export default function HeroSection({
         {/* Right Image */}
         <div className="flex justify-end items-end">
           <img
-            src={CK_ASSETS.HERO_IMAGE.URL}
-            alt={CK_ASSETS.HERO_IMAGE.ALT}
+            src={HERO_IMAGE.URL}
+            alt={HERO_IMAGE.ALT}
             className="w-[85%] h-full object-cover lg:object-contain"
           />
         </div>

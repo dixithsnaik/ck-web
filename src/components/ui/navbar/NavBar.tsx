@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { APP_LOGO } from "@/constants/assets";
 
 type NavItem = {
   name: string;
@@ -57,7 +58,7 @@ const DesktopMenu = ({
   handleDropdown: (itemName: string) => void;
 }) => {
   return (
-    <div className="hidden md:flex items-center space-x-6 relative">
+    <div className="hidden md:flex items-end space-x-6 relative">
       {navItems.map((item) => (
         <div key={item.name} className="relative">
           <div
@@ -146,8 +147,8 @@ export default function Navbar() {
       className="w-full bg-white shadow px-6 sm:px-8 lg:px-12 flex items-center justify-between h-16 relative"
     >
       {/* Logo */}
-      <div className="flex items-center space-x-2 font-bold text-xl">
-        <span>OK</span>
+      <div className="flex items-center justify-baseline space-x-2 font-mono text-2xl">
+        <img src={APP_LOGO.URL} alt={APP_LOGO.ALT} className="h-8 w-8" />
         <span>ComputeKart</span>
       </div>
 

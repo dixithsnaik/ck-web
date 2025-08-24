@@ -5,7 +5,7 @@ import {
   AuthShowcase,
   AuthUserForm 
 } from "@/components/ui/authShell";
-import { CK_ASSETS } from "@/constants/assets";
+import { HERO_IMAGE } from "@/constants/assets";
 import { AUTH_SHOWCASE_TEXT, LOGIN_HEADERS } from "@/constants/constants";
 
 const LoginPage = () => {
@@ -28,8 +28,8 @@ const LoginPage = () => {
         <AuthShowcase
           heading={AUTH_SHOWCASE_TEXT.TITLE}
           subHeading={AUTH_SHOWCASE_TEXT.SUB_TITLE}
-          image={CK_ASSETS.HERO_IMAGE.URL}
-          altName={CK_ASSETS.HERO_IMAGE.ALT}
+          image={HERO_IMAGE.URL}
+          altName={HERO_IMAGE.ALT}
         />
       </AuthIllustration>
     </AuthShell>

@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import Navbar from "@/components/ui/navbar/NavBar";
-import Footer from "@/components/ui/footer/footer";
+import Footer from "@/components/ui/footer/Footer";
 
 
 type LayoutProps = {

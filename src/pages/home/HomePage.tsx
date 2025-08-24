@@ -5,7 +5,7 @@ import PageSeatter, { Section } from "@/components/ui/pageSeatter/PageSeatter";
 import PageLayout from "@/components/ui/layout/pageLayout";
 import { HOMEPAGE_HERO_SECTION } from "@/constants/constants";
 import ServiceCard from "@/components/ui/card/serviceCard";
-import { CK_ASSETS } from "@/constants/assets";
+import { HERO_IMAGE } from "@/constants/assets";
 import FAQSection from "@/components/ui/faqSection/FAQSection";
 
 export default function HomePage() {
@@ -35,7 +35,7 @@ export default function HomePage() {
               className="max-w-1/4"
               heading="Resource Providers"
               description="Monetize your idle machines by securely sharing compute and storage resources with our cloud network. Join with minimal setup, stay in full control, and earn passive income—while powering a new wave of decentralized infrastructure."
-              image={CK_ASSETS.HERO_IMAGE.URL}
+              image={HERO_IMAGE.URL}
               showImage
               bgColor="bg-white"
               darkText
@@ -44,7 +44,7 @@ export default function HomePage() {
               className="max-w-1/4"
               heading="Resource Consumers"
               description="Leverage a scalable, distributed infrastructure that spans across multiple providers and locations. Run workloads seamlessly across clusters, migrate between nodes, and utilize the same application on different machines — all without managing the complexity."
-              image={CK_ASSETS.HERO_IMAGE.URL}
+              image={HERO_IMAGE.URL}
               showImage
               imageFirst
               bgColor="bg-white"
@@ -74,7 +74,7 @@ export default function HomePage() {
                 <ServiceCard
                   heading="Smart Compute Provisioning"
                   description="Turn your unused hardware into a revenue-generating asset. Let your servers work for you by joining a cloud network that rewards availability and performance — no extra IT burden."
-                  image={CK_ASSETS.HERO_IMAGE.URL}
+                  image={HERO_IMAGE.URL}
                   showImage
                   imageFirst
                   bgColor="bg-[#0A223C]"
