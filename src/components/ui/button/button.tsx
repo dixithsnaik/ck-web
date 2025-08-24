@@ -9,10 +9,10 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary:           "bg-green-400 text-gray-900",
-        secondary:         "bg-white text-gray-900 border-none",
-        primaryOutlined:   "bg-green-400 text-gray-900 border border-black",
-        secondaryOutlined: "bg-white text-gray-900 border border-black",
+        primary:           "bg-lime text-ink",
+        secondary:         "bg-white text-ink border-none",
+        primaryOutlined:   "bg-lime text-ink border border-black",
+        secondaryOutlined: "bg-white text-ink border border-black",
         cancel:            "bg-red-600 text-white border-none",
       },
     },

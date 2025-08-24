@@ -33,8 +33,8 @@ const Input: React.FC<InputProps> = ({
         placeholder={hint}
         className="
           flex-1 w-full bg-transparent border-none outline-none 
-          text-[#3A3A3A] text-sm font-normal
-          placeholder:text-[#6C6C6C]
+          text-ink text-sm font-medium placeholder:font-normal
+          placeholder:text-silverGray
         "
       />
       {suffix && (

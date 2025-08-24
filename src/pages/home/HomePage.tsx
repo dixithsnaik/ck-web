@@ -3,7 +3,13 @@ import { Button } from "@/components/ui/button";
 import HeroSection from "./components/HeroSection";
 import PageSeatter, { Section } from "@/components/ui/pageSeatter/PageSeatter";
 import PageLayout from "@/components/ui/layout/pageLayout";
-import { HOMEPAGE_HERO_SECTION } from "@/constants/constants";
+import {
+  BENEFITS_SECTION,
+  FAQ_SECTION,
+  FEATURES_SECTION,
+  HOMEPAGE_HERO_SECTION,
+  MISSION_SECTION,
+} from "@/constants/constants";
 import ServiceCard from "@/components/ui/card/serviceCard";
 import { HERO_IMAGE } from "@/constants/assets";
 import FAQSection from "@/components/ui/faqSection/FAQSection";
@@ -25,31 +31,25 @@ export default function HomePage() {
             variant={"primaryOutlined"}
             className="px-4 py-0.5 rounded-full shadow-none"
           >
-            Our Benefit for You
+            {BENEFITS_SECTION.BUTTON}
           </Button>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light text-slate-900 leading-tight whitespace-nowrap pb-8 pt-4">
-            Why You’ll Love This
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light text-navy leading-tight whitespace-nowrap pb-8 pt-4">
+            {BENEFITS_SECTION.HEADING}
           </h1>
           <div className="flex place-items-stretch justify-center gap-14">
-            <ServiceCard
-              className="max-w-1/4"
-              heading="Resource Providers"
-              description="Monetize your idle machines by securely sharing compute and storage resources with our cloud network. Join with minimal setup, stay in full control, and earn passive income—while powering a new wave of decentralized infrastructure."
-              image={HERO_IMAGE.URL}
-              showImage
-              bgColor="bg-white"
-              darkText
-            />
-            <ServiceCard
-              className="max-w-1/4"
-              heading="Resource Consumers"
-              description="Leverage a scalable, distributed infrastructure that spans across multiple providers and locations. Run workloads seamlessly across clusters, migrate between nodes, and utilize the same application on different machines — all without managing the complexity."
-              image={HERO_IMAGE.URL}
-              showImage
-              imageFirst
-              bgColor="bg-white"
-              darkText
-            />
+            {BENEFITS_SECTION.CARDS.map((card, index) => (
+              <ServiceCard
+                key={index}
+                className="max-w-1/4"
+                heading={card.HEADING}
+                description={card.DESCRIPTION}
+                image={HERO_IMAGE.URL}
+                showImage
+                bgColor="bg-white"
+                darkText
+                imageFirst={index % 2 === 1}
+              />
+            ))}
           </div>
         </Section>
         <Section>
@@ -61,23 +61,22 @@ export default function HomePage() {
                   variant="primaryOutlined"
                   className="px-4 py-0.5 rounded-full mb-4 shadow-none"
                 >
-                  Our Key Features
+                  {FEATURES_SECTION.BUTTON}
                 </Button>
-                <h1 className="text-2xl sm:text-2xl lg:text-4xl xl:text-5xl font-light text-slate-900 leading-tight">
-                  Discover we enterprises can power and consume compute
-                  seamlessly
+                <h1 className="text-2xl sm:text-2xl lg:text-4xl xl:text-5xl font-light text-ink leading-tight">
+                  {FEATURES_SECTION.HEADING}
                 </h1>
               </div>
 
               {/* Middle Card */}
               <div className="lg:col-span-4">
                 <ServiceCard
-                  heading="Smart Compute Provisioning"
-                  description="Turn your unused hardware into a revenue-generating asset. Let your servers work for you by joining a cloud network that rewards availability and performance — no extra IT burden."
+                  heading={FEATURES_SECTION.CARDS[0].HEADING}
+                  description={FEATURES_SECTION.CARDS[0].DESCRIPTION}
                   image={HERO_IMAGE.URL}
                   showImage
                   imageFirst
-                  bgColor="bg-[#0A223C]"
+                  bgColor="bg-dark"
                   darkText={false}
                   className="h-full"
                 />
@@ -86,28 +85,28 @@ export default function HomePage() {
               {/* Right Column */}
               <div className="lg:col-span-4 flex flex-col gap-6 h-full">
                 <ServiceCard
-                  heading="Roles: Be a Provider or a User"
-                  description="Act as a host or consumer — or both. Whether you want to sell spare capacity or consume compute power, the platform can caters to both of your needs."
-                  bgColor="bg-[#F8F7FE]"
+                  heading={FEATURES_SECTION.CARDS[1].HEADING}
+                  description={FEATURES_SECTION.CARDS[1].DESCRIPTION}
+                  bgColor="bg-mint"
                   darkText
                   showButton
                   className="flex-1 flex flex-col justify-between"
                   buttonSlot={
-                    <div className="text-gray-700 font-medium cursor-pointer">
-                      {"Learn More >"}
+                    <div className="text-silverGray font-medium cursor-pointer">
+                      {FEATURES_SECTION.CARDS[1].BUTTON}
                     </div>
                   }
                 />
                 <ServiceCard
-                  heading="On-Demand Virtual Machines"
-                  description="Launch secure, high-performance VMs in minutes. Whether your teams are local or remote, instantly provision compute power where and when it's needed."
-                  bgColor="bg-[#F8F7FE]"
+                  heading={FEATURES_SECTION.CARDS[2].HEADING}
+                  description={FEATURES_SECTION.CARDS[2].DESCRIPTION}
+                  bgColor="bg-mint"
                   darkText
                   showButton
                   className="flex-1 flex flex-col justify-between"
                   buttonSlot={
-                    <div className="text-gray-700 font-medium cursor-pointer">
-                      {"Learn More >"}
+                    <div className="text-silverGray font-medium cursor-pointer">
+                      {FEATURES_SECTION.CARDS[2].BUTTON}
                     </div>
                   }
                 />
@@ -120,15 +119,15 @@ export default function HomePage() {
             variant={"primaryOutlined"}
             className="px-4 py-0.5 rounded-full shadow-none"
           >
-            Why We Do This
+            {MISSION_SECTION.BUTTON}
           </Button>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light text-slate-900 leading-tight whitespace-nowrap pb-8 pt-4">
-            We see potential everywhere.
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light text-ink leading-tight whitespace-nowrap pb-8 pt-4">
+            {MISSION_SECTION.HEADING}
           </h1>
           <div className="flex items-stretch  justify-center gap-10">
             <ServiceCard
-              heading="Our Mission"
-              description="Heavy computing on any device—powered by millions of providers in one trusted cloud."
+              heading={MISSION_SECTION.CARDS[0].HEADING}
+              description={MISSION_SECTION.CARDS[0].DESCRIPTION}
               bgColor="bg-white"
               darkText
               showButton
@@ -136,8 +135,8 @@ export default function HomePage() {
               buttonSlot={<div />}
             />
             <ServiceCard
-              heading="Our Vision"
-              description="Our mission is to enable anyone to securely share computing resources with anyone in the world."
+              heading={MISSION_SECTION.CARDS[1].HEADING}
+              description={MISSION_SECTION.CARDS[1].DESCRIPTION}
               bgColor="bg-white"
               darkText
               showButton
@@ -151,12 +150,12 @@ export default function HomePage() {
             variant={"primaryOutlined"}
             className="px-4 py-0.5 rounded-full shadow-none"
           >
-           Frequently Asked Question
+            {FAQ_SECTION.BUTTON}
           </Button>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light text-slate-900 leading-tight whitespace-nowrap pb-8 pt-4">
-            Quick Answers, Clear Solutions
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light text-ink leading-tight whitespace-nowrap pb-8 pt-4">
+            {FAQ_SECTION.HEADING}
           </h1>
-          <FAQSection/>
+          <FAQSection />
         </Section>
       </PageSeatter>
     </PageLayout>

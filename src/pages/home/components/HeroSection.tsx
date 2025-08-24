@@ -18,14 +18,14 @@ export default function HeroSection({
         <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-20 flex flex-col justify-start pt-12">
           <div className="text-left w-full">
             <div className="mt-8">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold text-slate-900 leading-tight whitespace-nowrap">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold text-navy leading-tight whitespace-nowrap">
                 {heading}
               </h1>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-light text-slate-700 leading-snug">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-light text-navy leading-snug">
                 {subHeading}
               </h2>
 
-              <p className="text-slate-500 text-base sm:text-lg leading-relaxed max-w-xl mt-4">
+              <p className="text-silverGray text-base sm:text-lg leading-relaxed max-w-xl mt-4">
                 {description}
               </p>
             </div>

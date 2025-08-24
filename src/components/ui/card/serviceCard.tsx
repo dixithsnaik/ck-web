@@ -28,8 +28,8 @@ const ServiceCard = ({
   className = "",
   ...props
 }: ServiceCardProps) => {
-  const textColor = darkText ? "text-gray-900" : "text-white";
-  const descColor = darkText ? "text-gray-600" : "text-gray-300";
+  const textColor = darkText ? "text-navy" : "text-white";
+  const descColor = darkText ? "text-silverGray" : "text-white";
 
   return (
     <div
@@ -53,7 +53,7 @@ const ServiceCard = ({
       {showButton && (
         <div className="mt-6">
           {buttonSlot || (
-            <div className="px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium cursor-pointer hover:bg-blue-700 transition">
+            <div className="px-4 py-2 rounded-lg bg-blue text-white text-sm font-medium cursor-pointer transition">
               {buttonText}
             </div>
           )}

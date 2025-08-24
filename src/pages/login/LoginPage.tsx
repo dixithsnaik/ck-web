@@ -15,7 +15,7 @@ const LoginPage = () => {
       {/* Left Side: Login Form */}
       <AuthForm>
         <div className="flex flex-col items-center justify-center w-full max-w-sm mx-auto ">
-          <h2 className="flex flex-col text-2xl font-bold mb-10 text-center">
+          <h2 className="flex flex-col text-3xl font-medium mb-10 text-center">
             <span>{LOGIN_HEADERS.TITLE}</span>
             <span className="text-xl font-bold">{LOGIN_HEADERS.SUB_TITLE}</span>
           </h2>

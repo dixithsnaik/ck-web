@@ -74,7 +74,7 @@ export const AuthUserForm: React.FC<AuthUserFormProps> = ({ mode, redirectTo = "
           />
         )}
 
-        <div className="flex items-center justify-between w-full text-sm text-gray-400">
+        <div className="flex items-center justify-between w-full text-sm text-silverGray">
           <label className="flex items-center gap-2">
             <input
               type="checkbox"
@@ -85,7 +85,7 @@ export const AuthUserForm: React.FC<AuthUserFormProps> = ({ mode, redirectTo = "
           </label>
 
           {mode === "login" && (
-            <Button className="bg-transparent text-gray-400 font-normal underline">
+            <Button className="bg-transparent text-silverGray font-normal underline">
               Forgot Password
             </Button>
           )}
@@ -95,14 +95,14 @@ export const AuthUserForm: React.FC<AuthUserFormProps> = ({ mode, redirectTo = "
           {mode === "login" ? "Login" : "Sign Up"}
         </Button>
 
-        <div className="text-gray-400 text-sm gap-2 flex">
+        <div className="text-silverGray text-sm gap-2 flex">
           <span>
             {mode === "login"
               ? "Don't have an account?"
               : "Already have an account?"}
           </span>
           <Button
-            className="bg-transparent text-green-400 font-normal p-0"
+            className="bg-transparent text-lime font-normal p-0"
             onClick={() => navigate(mode === "login" ? "/signup" : "/login")}
           >
             {mode === "login" ? "Sign Up" : "Login"}

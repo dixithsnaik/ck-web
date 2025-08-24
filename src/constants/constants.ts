@@ -47,6 +47,68 @@ export const HOMEPAGE_HERO_SECTION = {
     DESCRIPTION: "Put your unused PC to work and earn real money by joining a global cloud network. It’s secure, seamless, and designed for anyone—no advanced setup needed. Start earning passive income just by staying connected."
 };
 
+export const BENEFITS_SECTION = {
+  BUTTON: "Our Benefit for You",
+  HEADING: "Why You’ll Love This",
+  CARDS: [
+    {
+      HEADING: "Resource Providers",
+      DESCRIPTION:
+        "Monetize your idle machines by securely sharing compute and storage resources with our cloud network. Join with minimal setup, stay in full control, and earn passive income—while powering a new wave of decentralized infrastructure.",
+    },
+    {
+      HEADING: "Resource Consumers",
+      DESCRIPTION:
+        "Leverage a scalable, distributed infrastructure that spans across multiple providers and locations. Run workloads seamlessly across clusters, migrate between nodes, and utilize the same application on different machines — all without managing the complexity.",
+    },
+  ],
+};
+
+export const FEATURES_SECTION = {
+  BUTTON: "Our Key Features",
+  HEADING: "Discover we enterprises can power and consume compute seamlessly.",
+  CARDS: [
+    {
+      HEADING: "Smart Compute Provisioning",
+      DESCRIPTION:
+        "Turn your unused hardware into a revenue-generating asset. Let your servers work for you by joining a cloud network that rewards availability and performance — no extra IT burden.",
+    },
+    {
+      HEADING: "Roles: Be a Provider or a User",
+      DESCRIPTION:
+        "Act as a host or consumer — or both. Whether you want to sell spare capacity or consume compute power, the platform can caters to both of your needs.",
+      BUTTON: "Learn More >",
+    },
+    {
+      HEADING: "On-Demand Virtual Machines",
+      DESCRIPTION:
+        "Launch secure, high-performance VMs in minutes. Whether your teams are local or remote, instantly provision compute power where and when it's needed.",
+      BUTTON: "Learn More >",
+    },
+  ],
+};
+
+export const MISSION_SECTION = {
+  BUTTON: "Why We Do This",
+  HEADING: "We see potential everywhere.",
+  CARDS: [
+    {
+      HEADING: "Our Mission",
+      DESCRIPTION:
+        "Heavy computing on any device—powered by millions of providers in one trusted cloud.",
+    },
+    {
+      HEADING: "Our Vision",
+      DESCRIPTION:
+        "Our mission is to enable anyone to securely share computing resources with anyone in the world.",
+    },
+  ],
+};
+
+export const FAQ_SECTION = {
+  BUTTON: "Frequently Asked Question",
+  HEADING: "Quick Answers, Clear Solutions",
+};
 export const FAQS = [
   {
     question: "What is this platform and who is it for?",
@@ -70,3 +132,4 @@ export const FAQS = [
     answer: "Answer for fifth question goes here...",
   },
 ];
+

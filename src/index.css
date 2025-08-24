@@ -5,38 +5,47 @@
    --font-display: "Poppins", "sans-serif";
     --breakpoint-3xl: 1920px;
 
-    /* White shades */
+/* 
     --color-white-50:  #FFFFFF;
     --color-white-100: #F9F9F9;
     --color-white-200: #F2F2F2;
     --color-white-300: #EBEBEB;
     --color-white-400: #E5E5E5;
 
-
-    /* Gray shades */
     --color-gray-50:  #F5F5F5;
     --color-gray-100: #E0E0E0;
     --color-gray-200: #BDBDBD;
     --color-gray-300: #9E9E9E;
     --color-gray-400: #757575;
 
-    /* Blue shades */
     --color-blue-50:  #E8EDFF;
     --color-blue-100: #C6D1FF;
     --color-blue-200: #9FB4FF;
     --color-blue-300: #7A93F9;
     --color-blue-400: #5A78F2;
 
-    /* Green shades */
     --color-green-50:  #F5FFD9;
     --color-green-100: #E9FF9F;
     --color-green-200: #D7FF66;
     --color-green-300: #C4F94B;
     --color-green-400: #B6F227;
 
-    /* Dark */
     --color-dark: #1E1E23;
 
     --color-ckBgPrimary: #FFFFFF;
-    --color-ckBgSecondary: #F8F7FE;
+    --color-ckBgSecondary: #F8F7FE; */
+
+      /* Base Colors */
+  --color-white: #FFFFFF; /*used*/
+  --color-navy: #0D223B; /*used*/
+  --color-dark: #0A223C; /*used*/
+  --color-gray: #45505C;
+  --color-silverGray: #6C6C6C; /*used*/
+  --color-lime: #A6EA18;  /*used*/
+  --color-mint: #F8F7FE; /*used*/
+  --color-slate: #24242C;
+  --color-ebony: #191920;
+  --color-blue: #4576FF; /*used*/
+  --color-charcoal: #161616; /*used*/
+  --color-ink: #000011; /*used*/
   }
