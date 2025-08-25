@@ -32,7 +32,7 @@ export const CustomAlert: React.FC<CustomAlertProps> = ({ type, message, onClose
         onClick={onClose}
         aria-label="Close alert"
       >
-        <X size={18} className="text-gray-600 hover:text-gray-900" />
+        <X size={18} className="text-ink hover:text-gray-900" />
       </button>
     </div>
   );

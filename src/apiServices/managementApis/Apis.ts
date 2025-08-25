@@ -4,22 +4,52 @@ interface LoginPayload {
   username_or_email: string;
   password: string;
 }
-export async function loginUser(payload: LoginPayload) {
-    try{
-  const { data } = await api.post("/login", payload);
-  return data;
-    }catch(error){
-        console.log("Error during login:", error);
-    }
+
+interface LoginResponse {
+  success: boolean;
+  token?: string;
+  message?: string;
 }
 
+export async function loginUser(payload: LoginPayload): Promise<LoginResponse | undefined> {
+  try {
+    const { data } = await api.post<LoginResponse>("/login", payload);
+
+    if (data?.token) {
+      sessionStorage.setItem("shortToken", data.token);
+      document.cookie = `shortToken=${data.token}; path=/; SameSite=Strict`;
+    }
+
+    return data;
+  } catch (error) {
+    console.error("Error during login:", error);
+  }
+}
+
+// Registration
 interface RegisterPayload {
   email: string;
   username: string;
   password: string;
 }
-export async function registerUser(payload: RegisterPayload) {
-    const { data } = await api.post("/register", payload);
-  return data;
+
+interface RegisterResponse {
+  success: boolean;
+  token?: string;
+  message?: string;
 }
 
+export async function registerUser(payload: RegisterPayload): Promise<RegisterResponse | undefined> {
+  try {
+    const { data } = await api.post<RegisterResponse>("/register", payload);
+
+    if (data?.token) {
+      sessionStorage.setItem("shortToken", data.token);
+      document.cookie = `shortToken=${data.token}; path=/; SameSite=Strict`;
+    }
+
+    return data;
+  } catch (error) {
+    console.error("Error during registration:", error);
+  }
+}

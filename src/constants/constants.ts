@@ -116,20 +116,24 @@ export const FAQS = [
       "This platform connects organizations that have spare server capacity with those who need on-demand compute power. Whether you're a company or an individual looking to monetize your unused hardware or a business/individual needing compute infrastructure, our platform supports both roles seamlessly.",
   },
   {
-    question: "What is this platform and who is it for?",
-    answer: "Answer for second question goes here...",
+    question: "How do I earn revenue by becoming a provider?",
+    answer: "Once you onboard your servers to the network, they become part of our public cloud pool. You earn passive income based on usage metrics like uptime, compute power provided, and reliability — all transparently tracked and paid out regularly.",
   },
   {
-    question: "What is this platform and who is it for?",
-    answer: "Answer for third question goes here...",
+    question: "What if my infrastructure is not being used by anyone?",
+    answer: "Don't worry! You can still earn from your idle machines. The platform is designed to optimize resource allocation, so even if your infrastructure isn't being used at the moment, you will still receive a base amount for being available for at least a certain time.",
   },
   {
-    question: "What is this platform and who is it for?",
-    answer: "Answer for fourth question goes here...",
+    question: "Can I act as both a provider and a client from the same account?",
+    answer: "Absolutely. Our flexible architecture allows you to offer your spare resources while simultaneously using compute power from the network — all managed from a single, unified interface.",
   },
   {
-    question: "What is this platform and who is it for?",
-    answer: "Answer for fifth question goes here...",
+    question: "As a Client Will i get full access to the Vm of the provider?",
+    answer: "Yes, as a client, you will have full access to the virtual machines (VMs) you provision. You can install software, run applications, and manage resources just like you would on a physical server. You won't have access to the underlying hardware or the ability to modify the host system.",
+  },
+   {
+    question: "Where can I find tutorials or guides?",
+    answer: "You can find tutorials and guides in our documentation section, which covers everything from onboarding to advanced features or else you can check out the demo video our YouTube channel.",
   },
 ];
 

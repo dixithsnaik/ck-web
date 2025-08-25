@@ -121,8 +121,17 @@ export default function Navbar() {
   const [token, setToken] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const sessionToken = sessionStorage.getItem("token");
+useEffect(() => {
+    let sessionToken = sessionStorage.getItem("shortToken");
+    if (!sessionToken) {
+      const cookies = document.cookie.split("; ");
+      const cookieItem = cookies.find(cookie => cookie.startsWith("shortToken="));
+      sessionToken = cookieItem ? cookieItem.split("=")[1] : null;
+      if (sessionToken) {
+        sessionStorage.setItem("shortToken", sessionToken);
+      }
+    }
+
     setToken(sessionToken);
   }, []);
 

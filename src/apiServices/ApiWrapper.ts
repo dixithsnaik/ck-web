@@ -1,11 +1,11 @@
 import axios from "axios";
 
-const baseURL = import.meta.env.VITE_MANAGEMENT_SERVER;
+const MG_SERVER = import.meta.env.VITE_MANAGEMENT_SERVER;
 
 export const api = axios.create({
-  baseURL,
-  withCredentials: true,
+  baseURL: MG_SERVER,
   headers: {
-    "Content-Type": "application/json",
-  },
+		'Content-Type': 'application/json',
+		bearer: document.cookie
+	}
 });
